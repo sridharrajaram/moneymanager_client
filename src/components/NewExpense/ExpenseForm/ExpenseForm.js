@@ -1,8 +1,7 @@
 import React , { useState } from 'react';
 import './ExpenseForm.css';
 import axios from 'axios';
-
-const beUrl = "https://sridharrajaram-moneymanager.herokuapp.com";
+import { UrlLink } from '../../../routes/UrlSettings';
 
 const ExpenseForm = (props) => {
 
@@ -30,7 +29,7 @@ const ExpenseForm = (props) => {
     if(title !== '' && amount !== '' && date !== '')
     props.onFormSubmit(newExpenseData);
 
-    axios.post(`${beUrl}/expense/addExpense`,newExpenseData)
+    axios.post(`${UrlLink}/expense/addExpense`,newExpenseData)
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
     
