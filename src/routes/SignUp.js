@@ -22,7 +22,8 @@ function SignUp() {
     }
   };
 
-  function checkEmail() {
+  function checkEmail(event) {
+    event.preventDefault();
     fetch(`${UrlLink}/data`, {
       method: "POST",
       body: JSON.stringify({ email: email }),
