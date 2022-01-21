@@ -22,8 +22,8 @@ function SignUp() {
     }
   };
 
-  function checkEmail(event) {
-    event.preventDefault();
+  function checkEmail() {
+    
     fetch(`${UrlLink}/data`, {
       method: "POST",
       body: JSON.stringify({ email: email }),
@@ -39,7 +39,7 @@ function SignUp() {
   useEffect(() => {
     checkEmail();
     // eslint-disable-next-line
-  }, [email]);
+  }, []);
 
   function createAccount() {
     fetch(`${UrlLink}/users/SignUp`, {
