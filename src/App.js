@@ -3,7 +3,7 @@ import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import axios from "axios";
 
-const beUrl = "http://localhost:5000";
+const beUrl = "https://sridharrajaram-moneymanager.herokuapp.com";
 
 function App() {
   

@@ -2,7 +2,7 @@ import React , { useState } from 'react';
 import './ExpenseForm.css';
 import axios from 'axios';
 
-const beUrl = "http://localhost:5000";
+const beUrl = "https://sridharrajaram-moneymanager.herokuapp.com";
 
 const ExpenseForm = (props) => {
 
