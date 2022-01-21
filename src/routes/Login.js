@@ -26,6 +26,7 @@ function Login({ setLoginState }) {
       body: JSON.stringify({ email: email, password: password }),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
     })
       .then((data) => data.json())

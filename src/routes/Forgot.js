@@ -23,6 +23,7 @@ function Forgot({ email, setEmail }) {
       body: JSON.stringify({ email: email }),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
     })
       .then((data) => data.json())

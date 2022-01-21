@@ -28,6 +28,7 @@ function SignUp() {
       body: JSON.stringify({ email: email }),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
     })
       .then((data) => data.json())
@@ -50,6 +51,7 @@ function SignUp() {
       }),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
     })
       .then((data) => data.json())

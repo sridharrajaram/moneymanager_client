@@ -34,6 +34,7 @@ function OpenedEmail() {
       body: JSON.stringify({ newPassword: password }),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
     })
       .then((data) => data.json())
