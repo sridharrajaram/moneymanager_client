@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import axios from "axios";
-import { UrlLink } from "./UrlSettings";
+
+const UrlLink = "https://sridharrajaram-moneymanager.herokuapp.com";
 
 
 function App() {

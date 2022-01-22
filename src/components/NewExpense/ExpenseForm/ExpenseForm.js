@@ -1,7 +1,8 @@
 import React , { useState } from 'react';
 import './ExpenseForm.css';
 import axios from 'axios';
-import { UrlLink } from '../../../routes/UrlSettings';
+
+const UrlLink = "https://sridharrajaram-moneymanager.herokuapp.com";
 
 const ExpenseForm = (props) => {
 
