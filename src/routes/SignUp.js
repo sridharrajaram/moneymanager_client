@@ -39,7 +39,7 @@ function SignUp() {
   useEffect(() => {
     checkEmail();
     // eslint-disable-next-line
-  }, [email]);
+  }, []);
 
   function createAccount() {
     fetch(`${UrlLink}/users/SignUp`, {
