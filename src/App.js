@@ -1,33 +1,23 @@
-import React, { useEffect, useState } from "react";
-import Expenses from "./components/Expenses/Expenses";
-import NewExpense from "./components/NewExpense/NewExpense";
-import axios from "axios";
-
-const UrlLink = "https://sridharrajaram-moneymanager.herokuapp.com";
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ExpenseTracker from "./routes/ExpenseTracker";
+import Login from "./routes/Login";
+import Register from "./routes/Register";
 
 function App() {
-  const [expense, setExpense] = useState([]);
-
-  useEffect(() => {
-    async function fetch() {
-      let data = await axios.get(`${UrlLink}/expense`);
-      setExpense(data.data);
-    }
-    fetch();
-  }, []);
-
-  const addExpenseHandler = (newExpense) => {
-    setExpense((prevExpenses) => {
-      return [newExpense, ...prevExpenses];
-    });
-  };
-  
   return (
-    <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expense} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} exact={true}></Route>
+        <Route path="/login" element={<Login />} exact={true}></Route>
+        <Route path="/register" element={<Register />} exact={true}></Route>
+        <Route
+          path="/expensetracker"
+          element={<ExpenseTracker />}
+          exact={true}
+        ></Route>
+      </Routes>
+    </Router>
   );
 }
 
